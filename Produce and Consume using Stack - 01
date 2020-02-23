@@ -1,0 +1,43 @@
+#include <iostream>
+#include<stack>
+using namespace std;
+int main() {
+stack<int>st;
+  int a,v=0;
+  while(cin>>a)
+  {
+   
+   if(a==3)
+     break;
+   
+    if(a==1 )
+    {
+        if(st.size()==3)
+    cout<<"Buffer is full";
+      else
+      {
+      v++;
+      st.push(a);
+      cout<<"Producer produces the item "<<v<<endl;
+      }
+ 
+    }
+    else if(a==2)
+    {
+     
+      if(v==0)
+        cout<<"Buffer is empty\n";
+      else
+      {
+      st.pop();
+      cout<<"Consumer consumes item "<<v<<endl;
+      v--;
+      }
+    }
+   
+  }
+ 
+ 
+  return 0;
+}
+ 
