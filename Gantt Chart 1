@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int a,arr1[100],arr2[100],arr[100];
+    cin>>a;
+    for(int i=0;i<a;i++)
+       cin>>arr[i];
+     for(int j=0;j<a;j++)
+       cin>>arr1[j];
+    for(int m=0;m<a;m++)
+   {
+     for(int k=m+1;k<a;k++)
+     {
+       if(arr1[m]>arr1[k])
+       {
+         int temp=0,temp1=0;
+         temp=arr1[m];
+         arr1[m]=arr1[k];
+         arr1[k]=temp;
+         temp1=arr[m];
+         arr[m]=arr[k];
+         arr[k]=temp1;
+       }
+     }
+    }cout<<"The gantt chart"<<endl;
+  for(int z=0;z<a;z++)
+  {
+    cout<<"P"<<arr[z]<<" ";
+  }
+  int c=0;
+  cout<<endl<<c<<" ";
+  for(int e=0;e<a;e++)
+  {
+    c=c+arr1[e];
+    cout<<c<<" ";
+  }
+	return 0;
+}
