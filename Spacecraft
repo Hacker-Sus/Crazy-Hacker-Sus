@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() {
+int a,b;
+  cin>>a>>b;
+  for(int i=a;i<b+a;i++)
+  {
+    cout<<i<<" "<<"1\n";
+  }
+  cout<<"the file is allocated to disk";
+  return 0;
+}
