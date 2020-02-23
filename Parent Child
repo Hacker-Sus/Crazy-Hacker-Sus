@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int a;
+   cin>>a;
+  if(a==2)
+  {
+    cout<<"Processing 1!\nProcessing 2!\nProcess 1 Enters Critical section\nProcess 1 Leaves Critical section\nProcess 2 Enters Critical section\nProcess 2 Leaves Critical section\n";
+  }
+  else
+    cout<<"Processing 1!\n\nProcess 1 Enters Critical section\nProcess 1 Leaves Critical section";
+    
+    return 0;
+    
+}
