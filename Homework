@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a;
+  cin>>a;
+  int s[100];
+  for(int i=0;i<a;i++)
+  {
+    cin>>s[i];
+  }
+  int c[100],d[100];
+  c[0]=0;
+  int o=0;
+  for(int v=0;v<a-1;v++)
+  {  
+    o=o+s[v];
+    c[v+1]=o;
+  }int n=0;
+  for(int y=0;y<a;y++)
+  {  n=n+s[y];
+    d[y]=n;
+  }
+  int sum=0,sum1=0;
+  for(int u=0;u<a;u++)
+  {
+    sum=sum+c[u];
+    sum1=sum1+d[u];
+  }
+  cout<<"Average Waiting Time:"<<sum/a<<endl;
+  cout<<"Average Turnaround Time:"<<sum1/a;
+  
+  
+  return 0;}
